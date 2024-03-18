@@ -27,11 +27,13 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: MediaQuery.of(context).size.height,
         decoration: _loginBackground(),
         child: Container(
           decoration: const BoxDecoration(gradient: AppPalete.loginGradient),
           child: Container(
-            padding: const EdgeInsets.fromLTRB(25, 50, 25, 50),
+            padding: const EdgeInsets.fromLTRB(25, 50, 25, 0),
+            margin: EdgeInsets.only(bottom: 50, top: 24),
             child: Form(
               key: _formKey,
               child: _loginPageContentBlock(
